@@ -9,7 +9,7 @@ const MenuOverlay = ({ links, scrolled,navbarOpen }) => {
 
                 if((links.length - 1) == index){
                     return (
-                        <div className="group relative hover:cursor-pointer border-2  py-3 px-14 rounded-full hover:bg-primary mt-4">
+                        <div key={index} className="group relative hover:cursor-pointer border-2  py-3 px-14 rounded-full hover:bg-primary mt-4">
                             <Link href={link.path} className='  block text-white font-bold text-xl rounded md:p-0 '>
                                 {link.title}
                             </Link>
