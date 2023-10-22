@@ -44,7 +44,7 @@ function AboutSection() {
                         Who we are
                         </h3>
                         <p className=' text-xl md:text-3xl font-bold mt-5 ' >
-                            World's largest and trust
+                            World&apos;s largest and trust
                             Constraction Company
                         </p>
                         <p className='text-second text-lg md:text-2xl mt-5' >
