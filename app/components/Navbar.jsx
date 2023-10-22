@@ -65,7 +65,7 @@ const [scrolled, setScrolled] = useState(false);
         <nav className={`fixed top-0 left-0 right-0 z-50 ${scrolled ||navbarOpen ? 'bg-black bg-opacity-80 transition duration-300 ease-in-out' : ''}  py-6 `} >
             <div className='flex flex-wrap items-center justify-between px-8 md:px-12 py-4' >
                 <Link href='/' className='text-lg md:text-xl  font-semibold flex gap-x-2 text-white items-center' >
-                    <Image src={'/assets/images/logo.png'} width={45} height={52} className='w-[25px] h-[32px] md:w-[45px] md:h-[52px]'  />
+                    <Image src={'/assets/images/logo.png'} width={45} height={52} className='w-[25px] h-[32px] md:w-[45px] md:h-[52px]' alt='logo'  />
                     <div>
                         <h2 className=' text-base md:text-xl' >PT. Nelvan Infra Hutama</h2>
                         <p className='text-xs' >Memberikan Kepuasan Kepada Relasi</p>

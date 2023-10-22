@@ -17,7 +17,7 @@ function Footer() {
 
                 <div className='md:w-[394px]' >
                   <div className='flex items-center gap-x-2 '>
-                    <Image src={'/assets/images/logo.png'} width={44} height={52} />
+                    <Image src={'/assets/images/logo.png'} width={44} height={52} alt='logo' />
                       <div className='' >
                         <h4 className='text-xl' >PT. Nelvan Infra Hutama</h4>
                         <p className='text-sm' >Memberikan Kepuasan Kepada Relasi</p>

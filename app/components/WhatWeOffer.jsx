@@ -44,7 +44,7 @@ const ModuleSwipper = ({active, index, item}) => {
     return (
         <div className={`max-w-[355px] pb-4  relative md:h-[564px] min-h-[400px]`} >
             <div className={`${active ==index ? 'absolute -top-12' : ''} mt-28`} >
-                <Image className='' src={image} width={355} height={422} />
+                <Image className='' src={image} width={355} height={422} alt={title} />
                 <h4 className='text-primary text-xl font-bold mt-5' >{title} </h4>
                 <p className='text-base mt-3' >
                     {desc}

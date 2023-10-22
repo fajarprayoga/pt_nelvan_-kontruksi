@@ -36,7 +36,7 @@ function AboutSection() {
                         animate={{ opacity: 1, scale:1}} // Atur opacity akhir ke 1 dan pergerakan x
                         transition={{ ease: "easeOut", duration: 2 }}
                     >
-                        <Image src={'/assets/images/about-image.png'} className='md:w-[449px] md:h-[542px] w-auto' width={449} height={542} />
+                        <Image src={'/assets/images/about-image.png'} className='md:w-[449px] md:h-[542px] w-auto' width={449} height={542}  alt='about image'/>
                     </motion.div>
                     </div>
                     <div className='' >
