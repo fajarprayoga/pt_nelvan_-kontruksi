@@ -1,4 +1,12 @@
 @tailwind base;
+
+@layer base {
+  html {
+ 
+  }
+}
+
+
 @tailwind components;
 @tailwind utilities;
 
@@ -18,10 +26,14 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+      @apply text-white font-Inter
 }
+
+/* .swiper-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
