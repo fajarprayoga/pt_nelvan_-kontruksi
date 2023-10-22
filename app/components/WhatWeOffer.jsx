@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import 'swiper/css';
+import { motion } from "framer-motion";
 const dataSwipper = [
     {
         title: 'Constraction Building',
@@ -83,7 +84,12 @@ function WhatWeOffer() {
         </div>
 
         {loading ==false && (
-            <div className='flex justify-center' >
+            <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale:1}} // Atur opacity akhir ke 1 dan pergerakan x
+            transition={{ ease: "easeOut", duration: 2 }}
+        >
+             <div className='flex justify-center' >
                 <Swiper
                     slidesPerView={itemView}
                     // grabCursor={true}
@@ -103,6 +109,8 @@ function WhatWeOffer() {
                     ))}
                 </Swiper>
             </div>
+        </motion.div>
+           
         )}
     </section>
   )

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React, { useState, useTransition } from 'react'
 import TabButton from './TabButton';
 import Link from 'next/link';
-
+import { motion } from "framer-motion";
 function AboutSection() {
 
     return (
@@ -31,14 +31,20 @@ function AboutSection() {
 
                 <div className='grid grid-cols-1 md:grid-cols-2 space-y-4 md:space-x-0  items-center mt-12 md:mt-0' >
                     <div className='flex justify-center' >
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale:1}} // Atur opacity akhir ke 1 dan pergerakan x
+                        transition={{ ease: "easeOut", duration: 2 }}
+                    >
                         <Image src={'/assets/images/about-image.png'} className='md:w-[449px] md:h-[542px] w-auto' width={449} height={542} />
+                    </motion.div>
                     </div>
                     <div className='' >
                         <h3 className='text-2xl text-primary font-bold' >
                         Who we are
                         </h3>
                         <p className=' text-xl md:text-3xl font-bold mt-5 ' >
-                            World’s largest and trust
+                            World's largest and trust
                             Constraction Company
                         </p>
                         <p className='text-second text-lg md:text-2xl mt-5' >
