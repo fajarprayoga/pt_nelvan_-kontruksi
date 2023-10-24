@@ -30,7 +30,7 @@ const navLinks = [
 
 function Navbar() {
     const [navbarOpen, setNavbarOpen] = useState(false)
-    const [menuLanguage,setMenuLanguage] = useState(false)
+    const [menuLanguage, setMenuLanguage] = useState(false)
 
     useEffect(() => {
         const handleResize = () => {
@@ -51,21 +51,21 @@ function Navbar() {
 
 
     // scroll
-const [scrolled, setScrolled] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
-  const handleScroll = () => {
-    if (window.scrollY > 10) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
+    const handleScroll = () => {
+        if (window.scrollY > 10) {
+            setScrolled(true);
+        } else {
+            setScrolled(false);
+        }
+    };
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 z-50 ${scrolled ||navbarOpen ? 'bg-black bg-opacity-80 transition duration-300 ease-in-out' : ''}  py-6 `} >
-            <div className='flex flex-wrap items-center justify-between px-8 md:px-12 py-4' >
+        <nav className={`fixed top-0 left-0 right-0 z-50 ${scrolled || navbarOpen ? 'bg-black bg-opacity-80 transition duration-300 ease-in-out' : ''}  py-6 `} >
+            <div className='flex flex-wrap items-center justify-between sm:px-8 px-2 md:px-12 py-4' >
                 <Link href='/' className='text-lg md:text-xl  font-semibold flex gap-x-2 text-white items-center' >
-                    <Image src={'/assets/images/logo.png'} width={45} height={52} className='w-[25px] h-[32px] md:w-[45px] md:h-[52px]' alt='logo'  />
+                    <Image src={'/assets/images/logo.png'} width={45} height={52} className='w-[25px] h-[32px] md:w-[45px] md:h-[52px]' alt='logo' />
                     <div>
                         <h2 className=' text-base md:text-xl' >PT. Nelvan Infra Hutama</h2>
                         <p className='text-xs' >Memberikan Kepuasan Kepada Relasi</p>
@@ -82,12 +82,12 @@ const [scrolled, setScrolled] = useState(false);
                         </button>)
                     }
                 </div>
-                
+
                 <div className='hidden lg:block'>
-                <ul className='flex p-4 md:p-0 md:flex-row md:space-x-16 mt-0 items-center font-Inter' >
+                    <ul className='flex p-4 md:p-0 md:flex-row md:space-x-16 mt-0 items-center font-Inter' >
                         {navLinks.map((link, index) => (
                             <li key={index} >
-                                <NavLink href={link.path} title={link.title} button={(navLinks.length-1) == index} />
+                                <NavLink href={link.path} title={link.title} button={(navLinks.length - 1) == index} />
                             </li>
                         ))}
                     </ul>
