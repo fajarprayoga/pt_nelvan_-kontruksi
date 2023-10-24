@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './ourvision.module.css';
 function OurVision() {
   return (
-    <section>
+    <section className='' id='service' >
         <div className={styles.background} >
           <div className='flex justify-between gap-x-4 items-center w-full py-4 md:py-14 px-8 md:px-28' >
             <h3 className='text-primary text-2xl font-bold' >Our <br /> Visison</h3>
