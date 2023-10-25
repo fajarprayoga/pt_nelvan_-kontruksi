@@ -2,7 +2,7 @@
 
 @layer base {
   html {
- 
+    scroll-behavior: smooth
   }
 }
 
@@ -29,7 +29,7 @@ body {
   background: linear-gradient(to bottom,
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-      @apply text-white font-Inter
+  @apply text-white font-Inter
 }
 
 /* .swiper-slide{
