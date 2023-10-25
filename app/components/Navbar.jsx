@@ -30,12 +30,12 @@ const navLinks = [
 
 function Navbar() {
     const [navbarOpen, setNavbarOpen] = useState(false)
-    const [menuLanguage, setMenuLanguage] = useState(false)
+    const [activeNavbar, setActiveNavbar] = useState('')
+
 
     useEffect(() => {
         const handleResize = () => {
             setNavbarOpen(window.innerWidth < 1024 && navbarOpen == true);
-            setMenuLanguage(window.innerWidth < 1024 && navbarOpen == true);
         };
         handleResize();
         window.addEventListener("resize", handleResize);
@@ -49,6 +49,24 @@ function Navbar() {
         }
     }, []);
 
+    useEffect(() => {
+        const hash = window.location.hash;
+        if (hash) {
+            const targetElement = document.querySelector(hash);
+
+            if (targetElement) {
+                // Gulir ke elemen target
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        setActiveNavbar(hash ?? '#home')
+        if (window.scrollY > 10) {
+            setScrolled(true);
+        } else {
+            setScrolled(false);
+        }
+    }, [])
+
 
     // scroll
     const [scrolled, setScrolled] = useState(false);
@@ -61,13 +79,12 @@ function Navbar() {
         }
     };
 
-    const scrollToSection = (id) => {
-        const section = document.getElementById(id);
-        console.log('id',id);
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
-        }
-      };
+    // const scrollToSection = (id) => {
+    //     const section = document.getElementById(id);
+    //     if (section) {
+    //       section.scrollIntoView({ behavior: 'smooth' });
+    //     }
+    //   };
 
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 ${scrolled || navbarOpen ? 'bg-black bg-opacity-80 transition duration-300 ease-in-out' : ''}  py-6 `} >
@@ -95,7 +112,7 @@ function Navbar() {
                     <ul className='flex p-4 md:p-0 md:flex-row md:space-x-16 mt-0 items-center font-Inter' >
                         {navLinks.map((link, index) => (
                             <li key={index} >
-                                <NavLink scrollToSection={scrollToSection} href={link.path} title={link.title} button={(navLinks.length - 1) == index} />
+                                <NavLink activeNavbar={activeNavbar} setActiveNavbar={setActiveNavbar} href={link.path} title={link.title} button={(navLinks.length - 1) == index} />
                             </li>
                         ))}
                     </ul>
