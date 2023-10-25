@@ -40,7 +40,7 @@ function Footer() {
                       Jl.PROPINSI KM.5,5 RT.03 KEL.NENANG KABUPATEN PENAJAM PASER UTARA
                       </p>
                       <p className='text-sm font-bold ' >
-                      <span className='text-primary' >Tel</span> : 0542—7588 713 / 0822 55223090
+                      <span className='text-primary' >Tel</span> : 05427588713 / 082255223090
                       </p>
                       <p className='text-sm font-bold ' >
                       <span className='text-primary' >Email</span> : nelvaninfrahutama@gmail.com

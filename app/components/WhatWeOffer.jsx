@@ -77,7 +77,7 @@ function WhatWeOffer() {
     }, []);
 
   return (
-    <section className='py-8 md:py-14 px-8 md:px-28 bg-[#000000]' >
+    <section className='py-8 md:py-14 px-8 md:px-28 bg-[#000000]' id='project' >
         <div className='flex justify-center flex-col items-center gap-y-1' >
             <h3 className='text-2xl text-center  md:text-3xl font-bold  ' >What We Offer</h3>
             <div className="inset-0 cursor-pointer bg-primary h-[4px] w-28" ></div>

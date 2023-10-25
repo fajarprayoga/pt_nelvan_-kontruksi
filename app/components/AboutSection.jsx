@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 function AboutSection() {
 
     return (
-        <section className='text-black   ' >
+        <section className='text-black   ' id='about' >
             <div className='relative py-14 md:py-52 px-8 md:px-28  bg-white' >
                 <div className=' absolute px-4 md:px-20 md:-top-20 -top-10 inset-x-0' >
                     <div className='h-[100px] md:h-[147px] pl-8 text-center md:text-start md:pl-2 pr-8 shadow-lg bg-white rounded-xl grid grid-cols-1 md:grid-cols-2' >
@@ -22,7 +22,7 @@ function AboutSection() {
                         <div className='flex gap-x-4 items-center justify-center md:justify-end' >
                             {[1,2,3,4,5,6].map((res,index) => (
                                 <div key={index} >
-                                    <Image src={`/assets/images/clients/${res}.png`} width={80} height={80} className='md:w-full w-[30px]' />
+                                    <Image src={`/assets/images/clients/${res}.png`} width={80} height={80} className='md:w-full w-[30px]' alt={`${res}.png`} />
                                 </div>
                             ))}
                         </div>

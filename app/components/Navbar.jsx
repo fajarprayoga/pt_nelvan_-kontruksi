@@ -61,6 +61,14 @@ function Navbar() {
         }
     };
 
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        console.log('id',id);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 ${scrolled || navbarOpen ? 'bg-black bg-opacity-80 transition duration-300 ease-in-out' : ''}  py-6 `} >
             <div className='flex flex-wrap items-center justify-between sm:px-8 px-2 md:px-12 py-4' >
@@ -87,7 +95,7 @@ function Navbar() {
                     <ul className='flex p-4 md:p-0 md:flex-row md:space-x-16 mt-0 items-center font-Inter' >
                         {navLinks.map((link, index) => (
                             <li key={index} >
-                                <NavLink href={link.path} title={link.title} button={(navLinks.length - 1) == index} />
+                                <NavLink scrollToSection={scrollToSection} href={link.path} title={link.title} button={(navLinks.length - 1) == index} />
                             </li>
                         ))}
                     </ul>
