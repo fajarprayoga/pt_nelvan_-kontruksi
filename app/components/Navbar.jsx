@@ -118,7 +118,7 @@ function Navbar() {
                     </ul>
                 </div>
             </div>
-            {navbarOpen ? <MenuOverlay scrolled={scrolled} navbarOpen={navbarOpen} links={navLinks} menuLanguage={menuLanguage} setMenuLanguage={setMenuLanguage} /> : null}
+            {navbarOpen ? <MenuOverlay scrolled={scrolled} navbarOpen={navbarOpen} links={navLinks} /> : null}
         </nav>
     )
 }
